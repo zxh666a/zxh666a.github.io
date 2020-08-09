@@ -146,6 +146,84 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Jquery" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/08/09/Jquery/">css笔记</a>
+    </h1>
+  
+
+        
+        <a href="/2020/08/09/Jquery/" class="archive-article-date">
+  	<time datetime="2020-08-09T07:10:32.464Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-09</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="1-Jquery的版本"><a href="#1-Jquery的版本" class="headerlink" title="1. Jquery的版本"></a>1. Jquery的版本</h2><ul>
+<li>1.x ：兼容IE678，官网不再更新</li>
+<li>2.x：不兼容IE678，官网不再更新</li>
+<li>3.x：不兼容IE678，官网最新维护版本</li>
+</ul>
+        
+          <a class="article-more-a" href="/2020/08/09/Jquery/#more">more >></a>
+        
+      
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-面试题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -324,11 +402,18 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="1-小知识"><a href="#1-小知识" class="headerlink" title="1. 小知识"></a>1. 小知识</h2><pre><code>1. width的默认值为auto  
-2. height是由内容撑开的
-3. 浮动提升半层
-4. 浮动元素和定位元素 margin：0 auto 会失效
-5. fixed定位，top left为auto</code></pre>
+        <h2 id="1-小知识"><a href="#1-小知识" class="headerlink" title="1. 小知识"></a>1. 小知识</h2><ul>
+<li><p>width的默认值为auto  </p>
+</li>
+<li><p>height是由内容撑开的</p>
+</li>
+<li><p>浮动提升半层</p>
+</li>
+<li><p>浮动元素和定位元素 margin：0 auto 会失效</p>
+</li>
+<li><p>fixed定位，top left为auto</p>
+</li>
+</ul>
         
           <a class="article-more-a" href="/2020/01/09/css笔记/#more">more >></a>
         
@@ -845,95 +930,10 @@
 
 
   
-    <article id="post-Js知识补充" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/01/02/Js知识补充/">js笔记</a>
-    </h1>
-  
-
-        
-        <a href="/2020/01/02/Js知识补充/" class="archive-article-date">
-  	<time datetime="2020-01-02T11:12:49.840Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-02</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="小知识点"><a href="#小知识点" class="headerlink" title="*小知识点"></a>*小知识点</h2><ul>
-<li><p>NaN是一种特殊的数字类型，使用<code>typeof</code>检查，返回的是number</p>
-</li>
-<li><p><code>parseint()</code>转换时，是从开头开始找数字，找到一个解析一个。第二个参数为可选参数，表示进制</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> str = <span class="string">'947966262@qq.com'</span></span><br><span class="line"><span class="keyword">const</span> str1 = <span class="built_in">parseInt</span>(str)</span><br><span class="line"><span class="built_in">console</span>.log(str1) <span class="comment">//947966262</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>== 和 !== 都是会进行隐式转换的</p>
-</li>
-<li><p>switch判断语句，case是会默认执行下一条语句，所以要加 <code>breake</code>。</p>
-</li>
-<li><p>函数的调用是一个压栈的过程，只会指定栈顶的函数。当栈顶函数执行完后会弹出。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test3</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'3'</span>) <span class="comment">// 1. 打印3</span></span><br><span class="line">  test4() <span class="comment">// 2. 调用test4()，这时候会进入test4中，不会执行下面的代码</span></span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'nmsl'</span>) <span class="comment">// 5.继续代码</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test4</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'4'</span>) <span class="comment">// 3. 打印4</span></span><br><span class="line">&#125;</span><br><span class="line">test3()</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h2 id="1-实例成员与静态成员"><a href="#1-实例成员与静态成员" class="headerlink" title="1.  实例成员与静态成员"></a>1.  实例成员与静态成员</h2>
-        
-          <a class="article-more-a" href="/2020/01/02/Js知识补充/#more">more >></a>
-        
-      
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    </nav>
   
 
 
@@ -1020,11 +1020,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
+                <a href="javascript:void(0)" class="js-tag color1">Typescript</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Typescript</a>
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1044,11 +1044,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">vue.js</a>
+                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
+                <a href="javascript:void(0)" class="js-tag color2">vue.js</a>
               </li>
              
               <li class="article-tag-list-item">

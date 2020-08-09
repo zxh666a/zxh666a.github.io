@@ -6,22 +6,25 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>继承 | codeHan</title>
+  <title>css笔记 | codeHan</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1. 原型链继承 缺点：  有引用类型的属性的时候，所有实例共享，一个修改了，所有的都会变 无法给继承来的元素传参">
-<meta name="keywords" content="js">
+  <meta name="description" content="1. Jquery的版本 1.x ：兼容IE678，官网不再更新 2.x：不兼容IE678，官网不再更新 3.x：不兼容IE678，官网最新维护版本">
+<meta name="keywords" content="css">
 <meta property="og:type" content="article">
-<meta property="og:title" content="继承">
-<meta property="og:url" content="http://yoursite.com/2020/01/02/继承/index.html">
+<meta property="og:title" content="css笔记">
+<meta property="og:url" content="http://yoursite.com/2020/08/09/Jquery/index.html">
 <meta property="og:site_name" content="codeHan">
-<meta property="og:description" content="1. 原型链继承 缺点：  有引用类型的属性的时候，所有实例共享，一个修改了，所有的都会变 无法给继承来的元素传参">
+<meta property="og:description" content="1. Jquery的版本 1.x ：兼容IE678，官网不再更新 2.x：不兼容IE678，官网不再更新 3.x：不兼容IE678，官网最新维护版本">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://s1.ax1x.com/2020/03/24/8bjdXV.png">
-<meta property="og:updated_time" content="2020-04-11T07:33:34.345Z">
+<meta property="og:image" content="https://s1.ax1x.com/2020/08/09/aTtRoj.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/08/09/aTthYn.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/08/09/aTtIS0.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/08/09/aTt7OU.png">
+<meta property="og:updated_time" content="2020-08-09T07:13:50.999Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="继承">
-<meta name="twitter:description" content="1. 原型链继承 缺点：  有引用类型的属性的时候，所有实例共享，一个修改了，所有的都会变 无法给继承来的元素传参">
-<meta name="twitter:image" content="https://s1.ax1x.com/2020/03/24/8bjdXV.png">
+<meta name="twitter:title" content="css笔记">
+<meta name="twitter:description" content="1. Jquery的版本 1.x ：兼容IE678，官网不再更新 2.x：不兼容IE678，官网不再更新 3.x：不兼容IE678，官网最新维护版本">
+<meta name="twitter:image" content="https://s1.ax1x.com/2020/08/09/aTtRoj.png">
   
     <link rel="alternative" href="/atom.xml" title="codeHan" type="application/atom+xml">
   
@@ -151,83 +154,96 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-继承" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Jquery" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      继承
+      css笔记
     </h1>
   
 
         
-        <a href="/2020/01/02/继承/" class="archive-article-date">
-  	<time datetime="2020-01-02T11:12:49.854Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-02</time>
+        <a href="/2020/08/09/Jquery/" class="archive-article-date">
+  	<time datetime="2020-08-09T07:10:32.464Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-08-09</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="1-原型链继承"><a href="#1-原型链继承" class="headerlink" title="1. 原型链继承"></a>1. 原型链继承</h2><ul>
-<li><p>缺点：</p>
-<ul>
-<li>有引用类型的属性的时候，所有实例共享，一个修改了，所有的都会变</li>
-<li>无法给继承来的元素传参</li>
-</ul>
-</li>
+        <h2 id="1-Jquery的版本"><a href="#1-Jquery的版本" class="headerlink" title="1. Jquery的版本"></a>1. Jquery的版本</h2><ul>
+<li>1.x ：兼容IE678，官网不再更新</li>
+<li>2.x：不兼容IE678，官网不再更新</li>
+<li>3.x：不兼容IE678，官网最新维护版本</li>
 </ul>
 <a id="more"></a>
 
+<h2 id="2-Juqery的基本使用"><a href="#2-Juqery的基本使用" class="headerlink" title="2. Juqery的基本使用"></a>2. Juqery的基本使用</h2><ul>
+<li><p>入口函数</p>
 <ul>
-<li>代码：<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">Father</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.name = <span class="string">'zxh'</span></span><br><span class="line">    <span class="keyword">this</span>.age = <span class="number">18</span></span><br><span class="line">    <span class="keyword">this</span>.c = [<span class="string">'1'</span>,<span class="string">'2'</span>,<span class="string">'3'</span>]</span><br><span class="line">  &#125;</span><br><span class="line">  Father.prototype.sayhi = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'hi'</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">Son</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.school = <span class="string">'sdbi'</span></span><br><span class="line">  &#125;</span><br><span class="line">Son.prototype = <span class="keyword">new</span> Father()</span><br><span class="line"></span><br><span class="line">  <span class="keyword">let</span> son = <span class="keyword">new</span> Son()</span><br><span class="line">  <span class="keyword">let</span> son2 = <span class="keyword">new</span> Son()</span><br><span class="line">  son.c.push(<span class="string">'5'</span>)</span><br><span class="line">  <span class="built_in">console</span>.log(son.c) <span class="comment">// ['1','2','3','5']</span></span><br><span class="line">  <span class="built_in">console</span>.log(son2.c)<span class="comment">// ['1','2','3','5']</span></span><br></pre></td></tr></table></figure>
+<li>等同于原生<code>js</code>的<code>DOMContentLoaded</code>,跟<code>load</code>事件是不一样的，l<code>oad</code>是等在页面、外部的<code>js、css</code>等文件全部加载完毕才执行代码。而<code>Jquery</code>的入口函数是<code>DOM</code>加载完毕就会加载内部代码</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'ok'</span>)</span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">//简化写法</span></span><br><span class="line">$(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'ok'</span>)</span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">//与$相等</span></span><br><span class="line">jQuery(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'ok'</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
 </li>
 </ul>
-<h2 id="2-借用构造函数继承"><a href="#2-借用构造函数继承" class="headerlink" title="2. 借用构造函数继承"></a>2. 借用构造函数继承</h2><ul>
-<li><p>缺点：</p>
+<h3 id="2-1-顶级对象"><a href="#2-1-顶级对象" class="headerlink" title="2.1 顶级对象"></a>2.1 顶级对象</h3><ul>
+<li><code>jQuery === $</code>,是<code>jQuery</code>的顶级对象,相当于<code>window</code></li>
+</ul>
+<h3 id="2-2-jQuery对象和DOM对象"><a href="#2-2-jQuery对象和DOM对象" class="headerlink" title="2.2 jQuery对象和DOM对象"></a>2.2 jQuery对象和DOM对象</h3><ul>
+<li><p><code>jQuery</code>获取过来的就是<code>jQuery</code>对象，反之则是<code>DOM</code>对象</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="built_in">document</span>.getElementById(<span class="string">'aaa'</span>) <span class="comment">//DOM对象</span></span><br><span class="line">$(<span class="string">'#aaa'</span>) <span class="comment">//jQuery对象</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>jQuery</code>只能使用<code>jQuery</code>的方法，<code>DOM</code>对象只能用<code>JavaScript</code>的属性和方法</p>
+</li>
+<li><p>两者的转换</p>
 <ul>
-<li>只能继承私有属性，原型链上的方法不能继承过来</li>
-</ul>
+<li><p>jQuery转换为DOM对象</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'a'</span>)[<span class="number">0</span>] <span class="comment">//jQuery对象的第0个元素就是DOM对象</span></span><br></pre></td></tr></table></figure>
 </li>
-<li><p>代码：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Father</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.name = <span class="string">'zxh'</span></span><br><span class="line">  <span class="keyword">this</span>.age = <span class="number">18</span></span><br><span class="line">&#125;</span><br><span class="line">Father.prototype.sayhi = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'hi'</span>)</span><br><span class="line">&#125;</span><br><span class="line">  </span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Son</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.school = <span class="string">'sdbi'</span></span><br><span class="line">  Father.call(<span class="keyword">this</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> son = <span class="keyword">new</span> Son()</span><br><span class="line"><span class="built_in">console</span>.log(son)</span><br><span class="line">son.saihi() <span class="comment">// son.sayhi is not a function</span></span><br></pre></td></tr></table></figure>
+<li><p>DOM转换为jQuery对象</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="built_in">document</span>.querySelector(<span class="string">'#aaa'</span>)</span><br><span class="line">$(a) <span class="comment">//把元素加入进去就转换成功了</span></span><br></pre></td></tr></table></figure>
 
 </li>
 </ul>
-<h2 id="3-组合式继承"><a href="#3-组合式继承" class="headerlink" title="3. 组合式继承"></a>3. 组合式继承</h2><ul>
-<li><p>缺点：</p>
-<ul>
-<li>原型上会多一份一模一样的属性</li>
-</ul>
 </li>
-<li><p>代码：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Father</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.name = <span class="string">'zxh'</span></span><br><span class="line">    <span class="keyword">this</span>.age = <span class="number">18</span></span><br><span class="line">  &#125;</span><br><span class="line">  Father.prototype.sayhi = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'hi'</span>)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">Son</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.school = <span class="string">'sdbi'</span></span><br><span class="line">    Father.call(<span class="keyword">this</span>)</span><br><span class="line">  &#125;</span><br><span class="line">  Son.prototype = <span class="keyword">new</span> Father</span><br><span class="line">  <span class="keyword">let</span> son = <span class="keyword">new</span> Son()</span><br><span class="line">  <span class="built_in">console</span>.log(son)</span><br></pre></td></tr></table></figure>
+</ul>
+<h3 id="2-3-jQuery的选择器"><a href="#2-3-jQuery的选择器" class="headerlink" title="2.3 jQuery的选择器"></a>2.3 jQuery的选择器</h3><ul>
+<li><p>普通选择器</p>
+<p><img src="https://s1.ax1x.com/2020/08/09/aTtRoj.png" alt="aTtRoj.png"></p>
+</li>
+<li><p>筛选选择器</p>
+<p><img src="https://s1.ax1x.com/2020/08/09/aTthYn.png" alt="aTthYn.png"></p>
+</li>
+<li><p>层级选择器</p>
+<p><img src="https://s1.ax1x.com/2020/08/09/aTtIS0.png" alt="aTtIS0.png"></p>
+</li>
+<li><p>当前元素</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="keyword">this</span>) <span class="comment">//选中当前元素</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>筛选方法</p>
+<p><img src="https://s1.ax1x.com/2020/08/09/aTt7OU.png" alt="aTt7OU.png"></p>
+</li>
+</ul>
+<h3 id="2-4-隐式迭代"><a href="#2-4-隐式迭代" class="headerlink" title="2.4 隐式迭代"></a>2.4 隐式迭代</h3><ul>
+<li>jQuery会自动遍历匹配到的所有元素，然后执行操作</li>
+</ul>
+<h3 id="2-5-样式操作"><a href="#2-5-样式操作" class="headerlink" title="2.5  样式操作"></a>2.5  样式操作</h3><ul>
+<li><p>基本使用</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'select'</span>).css(属性名，属性值) <span class="comment">// 修改</span></span><br><span class="line">$(<span class="string">'select'</span>).css(属性名) <span class="comment">// 如果只有属性名，没有属性值的话，会返回数据而不是修改</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>可以是对象的形式，修改多组样式</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'select'</span>).css(&#123;</span><br><span class="line">    width:<span class="number">400</span>,</span><br><span class="line">    height:<span class="number">400</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://s1.ax1x.com/2020/03/24/8bjdXV.png" alt="8bjdXV.png"></p>
 </li>
 </ul>
-<h2 id="4-寄生式继承"><a href="#4-寄生式继承" class="headerlink" title="4.  寄生式继承"></a>4.  寄生式继承</h2><ul>
-<li><p>缺点：</p>
-<ul>
-<li>每次创建实例都会调用一次函数</li>
-</ul>
-</li>
-<li><p>代码：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Father</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.name = <span class="string">'zxh'</span></span><br><span class="line">  <span class="keyword">this</span>.age = <span class="number">18</span></span><br><span class="line">&#125;</span><br><span class="line">Father.prototype.sayhi = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'hi'</span>)</span><br><span class="line">&#125;</span><br><span class="line">  </span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">obj</span>(<span class="params">obj</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> clone = <span class="built_in">Object</span>.create(obj)</span><br><span class="line">  <span class="keyword">return</span> clone</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> f = <span class="keyword">new</span> Father()</span><br><span class="line"><span class="keyword">let</span> son = obj(f)</span><br><span class="line"><span class="built_in">console</span>.log(son)</span><br></pre></td></tr></table></figure>
+<h3 id="2-6-类名操作"><a href="#2-6-类名操作" class="headerlink" title="2.6 类名操作"></a>2.6 类名操作</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//添加</span></span><br><span class="line">$(<span class="string">'select'</span>).addClass(<span class="string">'current'</span>)</span><br><span class="line"><span class="comment">//删除</span></span><br><span class="line">$(<span class="string">'select'</span>).removeClass(<span class="string">'current'</span>)</span><br><span class="line"><span class="comment">//切换类</span></span><br><span class="line">$(<span class="string">'select'</span>).togg1eClass(<span class="string">'current'</span>)</span><br></pre></td></tr></table></figure>
 
-</li>
-</ul>
-<h2 id="5-寄生组合式继承"><a href="#5-寄生组合式继承" class="headerlink" title="5. 寄生组合式继承"></a>5. 寄生组合式继承</h2><ul>
-<li><p>最理想的继承方式</p>
-</li>
-<li><p>代码：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Father</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">this</span>.name = <span class="string">'zxh'</span></span><br><span class="line">  <span class="keyword">this</span>.age = <span class="number">18</span></span><br><span class="line">&#125;</span><br><span class="line">Father.prototype.sayhi = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="built_in">console</span>.log(<span class="string">'hi'</span>)</span><br><span class="line">&#125;</span><br><span class="line">  </span><br><span class="line">  <span class="function"><span class="keyword">function</span> <span class="title">Son</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.school = <span class="string">'sdbi'</span></span><br><span class="line">    Father.call(<span class="keyword">this</span>)</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">int</span>(<span class="params">son,fat</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">let</span> clone = <span class="built_in">Object</span>.create(fat)</span><br><span class="line">  clone.constructor = son</span><br><span class="line">  <span class="keyword">return</span> clone</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> a = <span class="keyword">new</span> Father</span><br><span class="line"><span class="keyword">let</span> b = <span class="keyword">new</span> Son</span><br><span class="line"><span class="keyword">let</span> s = int(b,a)</span><br><span class="line"><span class="built_in">console</span>.log(s)</span><br><span class="line">s.sayhi()</span><br></pre></td></tr></table></figure>
+<h3 id="2-7-链式编程"><a href="#2-7-链式编程" class="headerlink" title="2.7 链式编程"></a>2.7 链式编程</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'tab li'</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    $(<span class="keyword">this</span>).addClass(<span class="string">'current'</span>).siblings().removeClass(<span class="string">'current'</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 
-</li>
-</ul>
 
       
 
@@ -274,7 +290,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">js</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">css</a>
         		</li>
       		
 		</ul>
@@ -330,7 +346,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/01/02/继承/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/08/09/Jquery/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -344,18 +360,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/01/09/css笔记/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          css笔记
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/01/02/webpack/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">webpack</div>
+    <a href="/2020/03/28/面试题/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">面试题</div>
       <i class="icon-circle-right"></i>
     </a>
   

@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>css笔记 | codeHan</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1. 小知识1. width的默认值为auto   2. height是由内容撑开的 3. 浮动提升半层 4. 浮动元素和定位元素 margin：0 auto 会失效 5. fixed定位，top left为auto">
+  <meta name="description" content="1. 小知识 width的默认值为auto    height是由内容撑开的  浮动提升半层  浮动元素和定位元素 margin：0 auto 会失效  fixed定位，top left为auto">
 <meta name="keywords" content="css">
 <meta property="og:type" content="article">
 <meta property="og:title" content="css笔记">
 <meta property="og:url" content="http://yoursite.com/2020/01/09/css笔记/index.html">
 <meta property="og:site_name" content="codeHan">
-<meta property="og:description" content="1. 小知识1. width的默认值为auto   2. height是由内容撑开的 3. 浮动提升半层 4. 浮动元素和定位元素 margin：0 auto 会失效 5. fixed定位，top left为auto">
+<meta property="og:description" content="1. 小知识 width的默认值为auto    height是由内容撑开的  浮动提升半层  浮动元素和定位元素 margin：0 auto 会失效  fixed定位，top left为auto">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2020-01-11T07:16:07.103Z">
+<meta property="og:updated_time" content="2020-04-19T12:12:58.679Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="css笔记">
-<meta name="twitter:description" content="1. 小知识1. width的默认值为auto   2. height是由内容撑开的 3. 浮动提升半层 4. 浮动元素和定位元素 margin：0 auto 会失效 5. fixed定位，top left为auto">
+<meta name="twitter:description" content="1. 小知识 width的默认值为auto    height是由内容撑开的  浮动提升半层  浮动元素和定位元素 margin：0 auto 会失效  fixed定位，top left为auto">
   
     <link rel="alternative" href="/atom.xml" title="codeHan" type="application/atom+xml">
   
@@ -169,116 +169,263 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="1-小知识"><a href="#1-小知识" class="headerlink" title="1. 小知识"></a>1. 小知识</h2><pre><code>1. width的默认值为auto  
-2. height是由内容撑开的
-3. 浮动提升半层
-4. 浮动元素和定位元素 margin：0 auto 会失效
-5. fixed定位，top left为auto</code></pre><a id="more"></a>
+        <h2 id="1-小知识"><a href="#1-小知识" class="headerlink" title="1. 小知识"></a>1. 小知识</h2><ul>
+<li><p>width的默认值为auto  </p>
+</li>
+<li><p>height是由内容撑开的</p>
+</li>
+<li><p>浮动提升半层</p>
+</li>
+<li><p>浮动元素和定位元素 margin：0 auto 会失效</p>
+</li>
+<li><p>fixed定位，top left为auto</p>
+</li>
+</ul>
+<a id="more"></a>
 
-<h2 id="2-禁止系统滚动条"><a href="#2-禁止系统滚动条" class="headerlink" title="2. 禁止系统滚动条"></a>2. 禁止系统滚动条</h2><pre><code>1. 系统滚动条默认是在文档身上。
-2. 如果heml和body身上同时有overflow，滚动条会作用在body上
-3. 禁止滚动条：
-    给html和body加上height为100%，overflow为hidden</code></pre><h2 id="3-绝对定位模拟固定定位"><a href="#3-绝对定位模拟固定定位" class="headerlink" title="3. 绝对定位模拟固定定位"></a>3. 绝对定位模拟固定定位</h2><pre><code>1. 绝对定位在没有开启定位的父元素的情况下，是参照初始包含块
-2. 只有系统滚动条会改变初始包含块的位置。
-3. 禁止系统滚动条，然后给body或者自己定义的包含块开始滚动条，就实现了模拟固定定位。</code></pre><h2 id="4-清除浮动"><a href="#4-清除浮动" class="headerlink" title="4. 清除浮动"></a>4. 清除浮动</h2><pre><code>`     .clearfix:after{
-        content: &quot;&quot;;
-        display: block;
-        clear: both;
-    }
-`</code></pre><h2 id="5-三列布局"><a href="#5-三列布局" class="headerlink" title="5. 三列布局"></a>5. 三列布局</h2><pre><code>1. 如果用定位来实现三列布局的话，需要包含容器，而且必须是相对定位。且定位提升层级，对以后页面的布局会产生很多影响
-2. 用浮动实现定位，但是主列无法优先显示。</code></pre><h2 id="6-圣杯布局"><a href="#6-圣杯布局" class="headerlink" title="6. 圣杯布局"></a>6. 圣杯布局</h2><pre><code>**margin-left 只动元素边界，不动元素位置。**
-1. 三列全部浮动，搭建完整的布局框架
-2. 使用margin为负值，调整两列的位置 **ps：中间列的width要与left的margin一致**
-3. 给包含块加padding，然后使用相对定位，使两列回到正常位置。显示出中间的文字</code></pre><h2 id="7-伪登高布局"><a href="#7-伪登高布局" class="headerlink" title="7. 伪登高布局"></a>7. 伪登高布局</h2><pre><code>1. 首先浮动起来
-2. 然后padding撑开边界
-3. margin为负值收回边界</code></pre><h2 id="8-双飞翼布局"><a href="#8-双飞翼布局" class="headerlink" title="8. 双飞翼布局"></a>8. 双飞翼布局</h2><pre><code>1. 在圣杯布局的基础上，不给包含块加padding，而是在middle中加一个div，然后给这个div加padding。
-2. 好处是不使用定位，没有提升层级。</code></pre><h2 id="9-黏连布局"><a href="#9-黏连布局" class="headerlink" title="9. 黏连布局"></a>9. 黏连布局</h2><pre><code>1. footer区域要在包裹区的外部
-2. 包裹区域的最小高度为100%
-3. 给footer加一个margin-top，为自身的高度
-4. 给main元素加一个padding-bottom 为footer的高度</code></pre><h2 id="10-绝对定位盒子的特性"><a href="#10-绝对定位盒子的特性" class="headerlink" title="10. 绝对定位盒子的特性"></a>10. 绝对定位盒子的特性</h2><pre><code>高宽有内容撑开
-水平方向 ： left + right + width + padding + margin = 包含块的padding区域的尺寸
-垂直方向 ： top + bottom + width + padding + margin = 包含块的padding区域的尺寸</code></pre><h2 id="11-垂直水平居中的方案"><a href="#11-垂直水平居中的方案" class="headerlink" title="11. 垂直水平居中的方案"></a>11. 垂直水平居中的方案</h2><pre><code>1. 已知高宽：
-    + 定位 =&gt; left top 为50% =&gt; 然后往回移动自身的宽高的一半
-    + 定位 =&gt; left top right bottom为0 =&gt; margin为auto
-2. 未知高度：
-    + 定位 =&gt; left top 50% =&gt; transfrom:translate3d 移回自身一半</code></pre><h2 id="12-transition"><a href="#12-transition" class="headerlink" title="12. transition"></a>12. transition</h2><pre><code>1. 过度只关心元素的初始状态和结束状态。
-2. 元素在初始渲染还没有结束的时候，是无法触发过度的
-3. 在绝大部分变换样式切换时，如果变换函数的位置，个数不相同 也不会触发过度（就是说，变换的api个数和位置摇一样）
-4. transitionend事件：属性过度完成时，触发该事件。
-5. 属性值的列表长度不一时，和事件有关的会重复列表而不是重复单个属性</code></pre><h2 id="13-百分比"><a href="#13-百分比" class="headerlink" title="13. 百分比"></a>13. 百分比</h2><pre><code>1. top，height百分比参照于包含块的高度
-2. left，margin，padding，width 百分比参照于包含块的宽度
-3. translate百分比参照于自身的宽高
-4. background-position百分比参照于（图片区域-图片的大小）</code></pre><h2 id="14-3d变换"><a href="#14-3d变换" class="headerlink" title="14. 3d变换"></a>14. 3d变换</h2><pre><code>1. perspe ctive 景深， 要给包裹的容器。
-2. 景深不可继承，但是可以作用于后代元素，景深越大，灭点越远，元素变形越小。
-3. transform: perspective(0px) rotateX(0deg)  这种方式，景深属性必须在最前面
-4. perspective-origin: left top; 景深的基点，也就是在哪个方向看。默认值为50%
-5. transform-style: preserve-3d; 不可继承属性，作用于子元素。构建3d舞台。
-6. 景深叠加： 最好只在最外面包裹器添加景深，内部如果再加景深会出现叠加。</code></pre><h2 id="15-动画"><a href="#15-动画" class="headerlink" title="15. 动画"></a>15. 动画</h2><pre><code>1. animation-name 指定关键帧的名字
-2. animation-duration: 3s 过度
-3. keyframes name {from{} to{}} 关键帧
-4. animation-delay 延时开始
-5. animation-iteration-count 重复 重复的是关键帧
-6. animation-direction  运动方向
-    1. 反转的是关键帧 和 time-function
-7. animation-fill-mode 控制元素在动画外的状态
-   1. forwards 与to状态保持一致
-   2. backwards 与from状态一致
-   3. both 一致
-8. animation-play-state 暂停与继续
-9. timing-function 作用于关键帧的周期  关键帧作用于动画的周期</code></pre><h2 id="16-flex"><a href="#16-flex" class="headerlink" title="16. flex"></a>16. flex</h2><pre><code>1.老版本
-   +  容器
-        +  display: -webkit-box;
-        + 容器的布局方向：-webkit-box-orient 
-        + 排列方向 -webkit-box-direction
-        + 对齐方式 -webkit-box-pack  富裕空间和主轴无关
-        + 侧轴的对齐方式 -webkit-box-align
-   +   项目
-        + 弹性因子 -webkit-box-flex  将主轴上的赋予空间按比例分配到项目的width上
-2.新版本
-   +  容器
-        +  display: flex;
-        + 容器的布局方向：flex-direction
-        + 对齐方式 justify-content 富裕空间在主轴的正方向
-        + 侧轴的对齐方式 align-items
-        + 是否换行 flex-wrap
-        + align-items align-content 两个属性都有时， 多行多列看content 单行单列看items
-        + flex-flow wrap和direction的简写 控制主轴和副轴的方向
-   +   项目
-        + 弹性因子 flex-grow 将主轴上的赋予空间按比例分配到项目的width上
-        + order order越大 元素越靠后
-        + align-self 管理自己的富裕空间</code></pre><h2 id="17-响应式布局"><a href="#17-响应式布局" class="headerlink" title="17. 响应式布局"></a>17. 响应式布局</h2><pre><code>1. 媒体查询
-    + css2：link标签内 media属性 print 打印时才有这个样式 screen 屏幕上才有
-    + css3：
-        - 响应式的核心
-        - @media screen and (width:){} 媒体查询中写规则（选择器 + 声明块）
-          - width:浏览器的窗口尺寸
-          - device-width：pc端是分辨率 移动端是看具体机器的参数
-          - device-pixel-width：pc为1 移动端看型号  要加webkit前缀
-          - orientation：portrait竖屏 landscape 横屏
-        - 关键字
-          - and 一般用于连接媒体类型或者属性
-          - only 紧跟media 解决老版本的问题
-          - 逗号 前后两者有一个可以 就触发
-          - not 反之</code></pre><h2 id="18-多列布局"><a href="#18-多列布局" class="headerlink" title="18. 多列布局"></a>18. 多列布局</h2><pre><code>1. colum-width：安宽度分
-2. colum-count：分多少列
-3. column-gap 间距
-4. column-rule 分割线</code></pre><h2 id="19-less"><a href="#19-less" class="headerlink" title="19. less"></a>19. less</h2><pre><code>1. less中只有 以 /**/ 的注释才会编译到css文件中
-2. 变量：
-   +  @变量名：变量值
-   +  选择器或者属性为变量时间，定义 ：@m:margin;  使用： @{m}:10px; 使用时要加{} url也一样的使用方法。
-   +  延迟加载 变量会等作用域内所有的解析完，才会加载
-3. 嵌套规则
-   + 例如加hover效果，如果直接添加，会多一个空格，不起作用
-   + 如果是同级关系 加一个 &amp;符号
-4. 混合： 
-   + 定义：.名字()  使用：.名字()  括号中可以设置参数，调用时进行传参，添加属性。定义时，可以设置默认值
-   + 实参前如果不给命名参数，就会默认按形参的顺序来。
-5. 匹配模式
-   + 定义一个标识符.sanjiaoxing(L,@w,@c) 然后按照标识符调用
-   + 顶一两个一样的混合 ，参数为@_ 就会自动匹配
-6. 继承
-   + extend(.名字) 继承语法，不能带参数
-7. 避免编译 ~“”</code></pre>
+<h2 id="2-禁止系统滚动条"><a href="#2-禁止系统滚动条" class="headerlink" title="2. 禁止系统滚动条"></a>2. 禁止系统滚动条</h2><ul>
+<li><p>系统滚动条默认是在文档身上。</p>
+</li>
+<li><p>如果<code>html</code>和<code>body</code>身上同时有<code>overflow</code>，滚动条会作用在<code>body</code>上</p>
+</li>
+<li><p>禁止滚动条：<br>给<code>html</code>和<code>body</code>加上<code>height</code>为100%，<code>overflow</code>为<code>hidden</code></p>
+</li>
+</ul>
+<h2 id="3-绝对定位模拟固定定位"><a href="#3-绝对定位模拟固定定位" class="headerlink" title="3. 绝对定位模拟固定定位"></a>3. 绝对定位模拟固定定位</h2><ul>
+<li><p>绝对定位在没有开启定位的父元素的情况下，是参照初始包含块</p>
+</li>
+<li><p>只有系统滚动条会改变初始包含块的位置。</p>
+</li>
+<li><p>禁止系统滚动条，然后给body或者自己定义的包含块开始滚动条，就实现了模拟固定定位。</p>
+</li>
+</ul>
+<h2 id="4-清除浮动"><a href="#4-清除浮动" class="headerlink" title="4. 清除浮动"></a>4. 清除浮动</h2><ul>
+<li><p>伪元素</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.clearfix</span><span class="selector-pseudo">:after</span>&#123;</span><br><span class="line">      <span class="attribute">content</span>: <span class="string">""</span>;</span><br><span class="line">      <span class="attribute">display</span>: block;</span><br><span class="line">      <span class="attribute">clear</span>: both;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+<h2 id="5-三列布局"><a href="#5-三列布局" class="headerlink" title="5. 三列布局"></a>5. 三列布局</h2><ul>
+<li><p>如果用定位来实现三列布局的话，需要包含容器，而且必须是相对定位。且定位提升层级，对以后页面的布局会产生很多影响</p>
+</li>
+<li><p>用浮动实现定位，但是主列无法优先显示。</p>
+</li>
+</ul>
+<h2 id="6-圣杯布局"><a href="#6-圣杯布局" class="headerlink" title="6. 圣杯布局"></a>6. 圣杯布局</h2><p>​    <strong>margin-left 只动元素边界，不动元素位置。</strong></p>
+<ul>
+<li><p>三列全部浮动，搭建完整的布局框架</p>
+</li>
+<li><p>使用margin为负值，调整两列的位置 <strong>ps：中间列的width要与left的margin一致</strong></p>
+</li>
+<li><p>给包含块加<code>padding</code>，然后使用相对定位，使两列回到正常位置。显示出中间的文字</p>
+</li>
+</ul>
+<h2 id="7-伪登高布局"><a href="#7-伪登高布局" class="headerlink" title="7. 伪登高布局"></a>7. 伪登高布局</h2><ul>
+<li><p>首先浮动起来</p>
+</li>
+<li><p>然后<code>padding-bottom</code>撑开边界</p>
+</li>
+<li><p><code>margin-bottom</code>为负值收回边界</p>
+</li>
+</ul>
+<h2 id="8-双飞翼布局"><a href="#8-双飞翼布局" class="headerlink" title="8. 双飞翼布局"></a>8. 双飞翼布局</h2><ul>
+<li><p>在圣杯布局的基础上，不给包含块加<code>padding</code>，而是在<code>middle</code>中加一个<code>div</code>，然后给这个<code>div</code>加<code>padding</code>。</p>
+</li>
+<li><p>好处是不使用定位，没有提升层级。</p>
+</li>
+</ul>
+<h2 id="9-黏连布局"><a href="#9-黏连布局" class="headerlink" title="9. 黏连布局"></a>9. 黏连布局</h2><ul>
+<li><p>footer区域要在包裹区的外部</p>
+</li>
+<li><p>包裹区域的最小高度为100%</p>
+</li>
+<li><p>给footer加一个<code>margin-top</code>，为自身的高度</p>
+</li>
+<li><p>给<code>main</code>元素加一个<code>padding-bottom</code> 为<code>footer</code>的高度</p>
+</li>
+</ul>
+<h2 id="10-绝对定位盒子的特性"><a href="#10-绝对定位盒子的特性" class="headerlink" title="10. 绝对定位盒子的特性"></a>10. 绝对定位盒子的特性</h2><ul>
+<li>高宽有内容撑开<br>水平方向 ： left + right + width + padding + margin = 包含块的padding区域的尺寸<br>垂直方向 ： top + bottom + width + padding + margin = 包含块的padding区域的尺寸</li>
+</ul>
+<h2 id="11-垂直水平居中的方案"><a href="#11-垂直水平居中的方案" class="headerlink" title="11. 垂直水平居中的方案"></a>11. 垂直水平居中的方案</h2><ul>
+<li><p>已知高宽：</p>
+<ul>
+<li>定位 =&gt; left top 为50% =&gt; 然后往回移动自身的宽高的一半</li>
+<li>定位 =&gt; left top right bottom为0 =&gt; margin为auto</li>
+</ul>
+</li>
+<li><p>未知高度：</p>
+<ul>
+<li>定位 =&gt; left top 50% =&gt; <code>transfrom:translate3d</code> 移回自身一半</li>
+</ul>
+</li>
+</ul>
+<h2 id="12-transition"><a href="#12-transition" class="headerlink" title="12. transition"></a>12. transition</h2><ul>
+<li><p>过度只关心元素的初始状态和结束状态。</p>
+</li>
+<li><p>元素在初始渲染还没有结束的时候，是无法触发过度的</p>
+</li>
+<li><p>在绝大部分变换样式切换时，如果变换函数的位置，个数不相同 也不会触发过度（就是说，变换的<code>api</code>个数和位置摇一样）</p>
+</li>
+<li><p><code>transitionend</code>事件：属性过度完成时，触发该事件。</p>
+</li>
+<li><p>属性值的列表长度不一时，和事件有关的会重复列表而不是重复单个属性</p>
+</li>
+</ul>
+<h2 id="13-百分比"><a href="#13-百分比" class="headerlink" title="13. 百分比"></a>13. 百分比</h2><ul>
+<li><p>top，height百分比参照于包含块的高度</p>
+</li>
+<li><p>left，margin，padding，width 百分比参照于包含块的宽度</p>
+</li>
+<li><p>translate百分比参照于自身的宽高</p>
+</li>
+<li><p>background-position百分比参照于（图片区域-图片的大小）</p>
+</li>
+</ul>
+<h2 id="14-3d-变换"><a href="#14-3d-变换" class="headerlink" title="14. 3d 变换"></a>14. 3d 变换</h2><ul>
+<li><p><code>perspective</code> 景深， 要给包裹的容器。</p>
+</li>
+<li><p>景深不可继承，但是可以作用于后代元素，景深越大，灭点越远，元素变形越小。</p>
+</li>
+<li><p><code>perspective-origin: left top</code>; 景深的基点，也就是在哪个方向看。默认值为50%</p>
+</li>
+<li><p><code>transform-style</code>: <code>preserve-3d</code>; 不可继承属性，作用于子元素。构建<code>3d</code>舞台。</p>
+</li>
+<li><p>景深叠加： 最好只在最外面包裹器添加景深，内部如果再加景深会出现叠加。</p>
+</li>
+</ul>
+<h2 id="15-动画"><a href="#15-动画" class="headerlink" title="15. 动画"></a>15. 动画</h2><ul>
+<li><p><code>animation-name</code> 指定关键帧的名字</p>
+</li>
+<li><p><code>animation-duration</code>: 3s 过度</p>
+</li>
+<li><p><code>keyframes name {from{} to{}}</code> 关键帧</p>
+</li>
+<li><p><code>animation-delay</code> 延时开始</p>
+</li>
+<li><p><code>animation-iteration-count</code> 重复 重复的是关键帧</p>
+</li>
+<li><p><code>animation-direction</code> 运动方向</p>
+<ul>
+<li>反转的是关键帧 和 <code>time-function</code></li>
+</ul>
+</li>
+<li><p><code>animation-fill-mode</code>控制元素在动画外的状态</p>
+<ul>
+<li><code>forwards</code> 与<code>to</code>状态保持一致</li>
+<li><code>backwards</code> 与<code>from</code>状态一致</li>
+<li><code>both</code> 一致</li>
+</ul>
+</li>
+<li><p><code>animation-play-state</code> 暂停与继续</p>
+</li>
+<li><p><code>timing-function</code> 作用于关键帧的周期  关键帧作用于动画的周期</p>
+</li>
+</ul>
+<h2 id="16-flex"><a href="#16-flex" class="headerlink" title="16. flex"></a>16. flex</h2><p>1.老版本</p>
+<ul>
+<li>容器<ul>
+<li><code>display: -webkit-box</code>;</li>
+<li>容器的布局方向：<code>-webkit-box-orient</code> </li>
+<li>排列方向 <code>-webkit-box-direction</code></li>
+<li>对齐方式 <code>-webkit-box-pack</code>  富裕空间和主轴无关</li>
+<li>侧轴的对齐方式 <code>-webkit-box-align</code></li>
+</ul>
+</li>
+<li>项目<ul>
+<li>弹性因子<code>-webkit-box-flex</code>  将主轴上的赋予空间按比例分配到项目的<code>width</code>上</li>
+</ul>
+</li>
+</ul>
+<p>2.新版本</p>
+<ul>
+<li>容器<ul>
+<li><code>display: flex;</code></li>
+<li>容器的布局方向：<code>flex-direction</code></li>
+<li>对齐方式 <code>justify-content</code>富裕空间在主轴的正方向</li>
+<li>侧轴的对齐方式 <code>align-items</code></li>
+<li>是否换行 <code>flex-wrap</code></li>
+<li><code>align-items</code> <code>align-content</code>两个属性都有时， 多行多列看<code>content</code> 单行单列看<code>items</code></li>
+<li><code>flex-flow</code>:<code>wrap</code>和<code>direction</code>的简写 控制主轴和副轴的方向</li>
+</ul>
+</li>
+<li>项目<ul>
+<li>弹性因子 <code>flex-grow</code>将主轴上的赋予空间按比例分配到项目的<code>width</code>上</li>
+<li>order <code>order</code>越大 元素越靠后</li>
+<li><code>align-self</code>管理自己的富裕空间</li>
+</ul>
+</li>
+</ul>
+<h2 id="17-响应式布局"><a href="#17-响应式布局" class="headerlink" title="17. 响应式布局"></a>17. 响应式布局</h2><ol>
+<li>媒体查询<ul>
+<li>css2：<code>link</code>标签内 <code>media</code>属性 <code>print</code> 打印时才有这个样式 <code>screen</code>屏幕上才有</li>
+<li>css3：<ul>
+<li>响应式的核心</li>
+<li><code>@media screen and (width:){}</code> 媒体查询中写规则（选择器 + 声明块）<ul>
+<li>width:浏览器的窗口尺寸</li>
+<li><code>device-width</code>：<code>pc</code>端是分辨率 移动端是看具体机器的参数</li>
+<li><code>device-pixel-width</code>：<code>pc</code>为1 移动端看型号  要加<code>webkit</code>前缀</li>
+<li><code>orientation</code>：<code>portrait</code>竖屏 <code>landscape</code> 横屏</li>
+</ul>
+</li>
+<li>关键字<ul>
+<li><code>and</code> 一般用于连接媒体类型或者属性</li>
+<li><code>only</code>紧跟<code>media</code>解决老版本的问题</li>
+<li>逗号 前后两者有一个可以 就触发</li>
+<li><code>not</code>反之</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="18-多列布局"><a href="#18-多列布局" class="headerlink" title="18. 多列布局"></a>18. 多列布局</h2><ul>
+<li><p><code>colum-width</code>：安宽度分</p>
+</li>
+<li><p><code>colum-count</code>：分多少列</p>
+</li>
+<li><p><code>column-gap</code> 间距</p>
+</li>
+<li><p><code>column-rule</code> 分割线</p>
+</li>
+</ul>
+<h2 id="19-less"><a href="#19-less" class="headerlink" title="19. less"></a>19. less</h2><ol>
+<li><code>less</code>中只有 以 /**/ 的注释才会编译到<code>css</code>文件中</li>
+<li>变量：<ul>
+<li>@变量名：变量值</li>
+<li>选择器或者属性为变量时间，定义 ：<code>@m:margin</code>;  使用： <code>@{m}:10px</code>; 使用时要加{} <code>url</code>也一样的使用方法。</li>
+<li>延迟加载 变量会等作用域内所有的解析完，才会加载</li>
+</ul>
+</li>
+<li>嵌套规则<ul>
+<li>例如加<code>hover</code>效果，如果直接添加，会多一个空格，不起作用</li>
+<li>如果是同级关系 加一个 &amp;符号</li>
+</ul>
+</li>
+<li>混合： <ul>
+<li>定义：.名字()  使用：.名字()  括号中可以设置参数，调用时进行传参，添加属性。定义时，可以设置默认值</li>
+<li>实参前如果不给命名参数，就会默认按形参的顺序来。</li>
+</ul>
+</li>
+<li>匹配模式<ul>
+<li>定义一个标识符<code>.sanjiaoxing(L,@w,@c)</code> 然后按照标识符调用</li>
+<li>顶一两个一样的混合 ，参数为@_ 就会自动匹配</li>
+</ul>
+</li>
+<li>继承<ul>
+<li>extend(.名字) 继承语法，不能带参数</li>
+</ul>
+</li>
+<li>避免编译 ~“”</li>
+</ol>
+<h2 id="20-rem布局"><a href="#20-rem布局" class="headerlink" title="20. rem布局"></a>20. rem布局</h2><ul>
+<li><code>html</code>根标签设置字体大小 =&gt; 例如<code>750px</code>的屏幕,分为15等分，根标签的<code>font-size</code>设为<code>50px</code></li>
+<li>然后在设置大小的时候，就用原来的<code>px</code> 除以 <code>50</code> 得到rem值</li>
+</ul>
+
       
 
       
@@ -524,11 +671,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">js</a>
+                <a href="javascript:void(0)" class="js-tag color1">Typescript</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Typescript</a>
+                <a href="javascript:void(0)" class="js-tag color3">js</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -548,11 +695,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">vue.js</a>
+                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">webpack</a>
+                <a href="javascript:void(0)" class="js-tag color2">vue.js</a>
               </li>
              
               <li class="article-tag-list-item">
